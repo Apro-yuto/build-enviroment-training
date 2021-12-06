@@ -6,11 +6,13 @@
 .env
 .env.backup
 .phpunit.result.cache
+composer.lock
 docker-compose.override.yml
 /db/
 Homestead.json
 Homestead.yaml
 npm-debug.log
+package-lock.json
 yarn-error.log
 /.idea
 /.vscode
