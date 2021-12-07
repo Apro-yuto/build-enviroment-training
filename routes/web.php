@@ -23,4 +23,8 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/{any}', function () {
+        return view('welcome');
+    })->where('any', '.*(?!\blogout\b)');
 });
+
