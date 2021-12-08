@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>App</title>
+        <link rel="stylesheet" src="{{ asset('css/reset.css')  }}">
     </head>
     <body class="antialiased">
         <form
