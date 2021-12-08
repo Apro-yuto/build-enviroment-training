@@ -1,19 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-const rootElement = document.getElementById("root");
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AppLayout from '@/js/Layout/AppLayout'
 
 function Home() {
   return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Contact() {
-  return <h2>Contact</h2>;
 }
 
 function NotFound() {
@@ -22,15 +13,16 @@ function NotFound() {
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="*" element={<NotFound />} />
+        <>
+            <AppLayout />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="*" element={<NotFound />} />
 
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-        </BrowserRouter>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </BrowserRouter>
+        </>
     )
 }
 
